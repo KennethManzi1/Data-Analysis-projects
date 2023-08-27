@@ -1,8 +1,1 @@
-# SQLwork
-echo "# SQLwork" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/KennethManzi1/SQLwork.git
-git push -u origin main
+# This repository details additional projects and case studies done in SQL
