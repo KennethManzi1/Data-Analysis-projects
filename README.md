@@ -1,5 +1,8 @@
 # Data Analysis projects
 
+![images](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/a074374c-8fe8-4879-9495-cac8b1f4e611)
+
+
 This repository was created to illustrate all of the additional projects and case studies that were created and completed using tools such as SQL, Python, R and other tools.
 
 For more information on my work, check out my website [here](https://kennykaijage.com/)
