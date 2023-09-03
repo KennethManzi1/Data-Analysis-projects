@@ -27,6 +27,7 @@
 
 ## Link to the CSV file
 - The link to the Kaggle CSV file can be found [here](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales/code)
+- I have also included the CSV [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/Supermarket_data%20Analysis/supermarketsales.csv)
 
 
 
