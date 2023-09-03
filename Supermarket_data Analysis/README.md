@@ -7,7 +7,6 @@
 - [Business Task](#business-task)
 - [Solution and Code](#Solution-and-Code)
 - [Link to the CSV file](#Link-to-the-CSV-file)
-- [Contact Information]
 
 ***
 
