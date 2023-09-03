@@ -3,3 +3,4 @@
 This repository details additional projects and case studies done in SQL, Python, R and other tools
 
 ## Table of Contents
+- [Kaggle Super Market Analysis](
