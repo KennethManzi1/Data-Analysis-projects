@@ -49,6 +49,13 @@ sup_dat.describe()
 
 
 
+- We will check for any Null Values
+```
+sup_dat.isnull()
+```
+![Screen Shot 2023-09-14 at 2 24 59 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/13acbea5-2a9a-4e75-bc88-9860f6e3169d)
+
+
 
 ***
 
