@@ -291,6 +291,12 @@ plt.show()
 
 ```
 
+![Screen Shot 2023-09-14 at 4 11 36 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/b7dc312f-258e-4761-a95b-ee7465430bb2)
+
+###
+
+- And that is the end of the analysis of the super market dataset from Kaggle. Let me know if you have any questions or concerns.
+- Any feedback is greatly appreciated!!!
 
 
 ***
