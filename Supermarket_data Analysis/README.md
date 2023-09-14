@@ -40,7 +40,7 @@ import matplotlib.pyplot as plt
   
 - Next we will get the Supermarket Sales Csv and looking at the information available
 ```Python
-sup_dat = pd.read_csv('/Users/kennykaijage/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Datasets/Datasets_for_p
+sup_dat = pd.read_csv('/Users/kennykaijage/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Datasets/Datasets_for_projects/supermarketsales.csv')
 sup_dat
 sup_dat.info()
 sup_dat.describe()
