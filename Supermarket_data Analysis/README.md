@@ -65,7 +65,79 @@ sup_dat['City'].value_counts()
 ```
 ![Screen Shot 2023-09-14 at 2 29 02 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/551fbd90-e210-4319-ad04-20f28f9a98c5)
 
-nnn
+
+##
+
+- Analyzing the relationship between the product price vs the gross income variables using a scatter plot
+
+```
+plt.figure(figsize=(10, 10))
+x = sup_dat['Unit price']
+y = sup_dat['gross income']
+plt.scatter(x, y, color = 'magenta')
+plt.xlabel('Unit Price')
+plt.ylabel('Gross Income')
+plt.title('Comparing Unit Price and Gross Income', fontsize = 10)
+plt.show()
+```
+![Screen Shot 2023-09-14 at 2 58 37 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/84eb11fd-35b7-4d81-875f-f12fbb51a979)
+
+- Based on the scatterplot, we can see a positive correlation between Unit Price and Gross Income.
+- As the Unit Price goes up, so does the Gross Income and Vice Versa.
+
+##
+
+- Analyzing number of male and female data contributions within the dataset and creating a pie chart to illustrate the data 
+```
+count_gender = sup_dat['Gender'].value_counts()
+Female_count = count_gender['Female']
+Male_count = count_gender['Male']
+label = ['Female', 'Male']
+
+print('Number of Male:', Male_count)
+print('Number of Female:', Female_count)
+
+Male_ratio = Male_count/(Male_count+Female_count)
+print('Male Ratio is', Male_ratio)
+Female_ratio = Female_count/(Male_count+Female_count)
+print('Female Ratio is ', Female_ratio)
+
+plt.pie([Female_ratio, Male_ratio], labels=label)
+plt.title('Male and Female Ratio', fontsize = 20)
+plt.show()
+```
+
+![Screen Shot 2023-09-14 at 3 00 59 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/0ba3cfb2-7b2e-4b21-b904-e024b97fc56d)
+
+
+#
+- How many Sales done in each City?
+```
+cities = sup_dat['City']
+City_counts = sup_dat['City'].value_counts()
+Yangon_count = City_counts['Yangon']
+naypyitaw_count = City_counts['Naypyitaw']
+mandalay_count = City_counts['Mandalay']
+
+x = ['Yangon', 'Naypyitaw', 'Mandalay']
+y= [Yangon_count, naypyitaw_count, mandalay_count]
+#fig, ax = plt.subplots()
+plt.bar(x, y, label = ['red', 'blue', 'orange'], color = ['tab:red', 'tab:blue', 'tab:orange'])
+plt.xlabel('Cities')
+plt.ylabel('Sales done')
+plt.show()
+print(Yangon_count,
+naypyitaw_count,
+mandalay_count)
+
+```
+![Screen Shot 2023-09-14 at 3 05 50 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/9713d727-d03b-450d-9ad6-20d4284d99a2)
+
+- Based on the visual, we can see that Yangon has the highest number of sales at 340.
+
+
+
+
 ***
 
 ## Link to the CSV file
