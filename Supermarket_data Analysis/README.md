@@ -30,7 +30,7 @@
 
 - First we will begin to import the necessary libraries that we will need to conduct the analysis. These libraries are Pandas, Numpy, Matplotlib for the visualizations and also seaborn for the visualizations as well
 
-```
+```python
 #Importing the Libraries
 import seaborn as sns
 import numpy as np
