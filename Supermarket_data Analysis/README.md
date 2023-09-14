@@ -65,7 +65,7 @@ sup_dat['City'].value_counts()
 ```
 ![Screen Shot 2023-09-14 at 2 29 02 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/551fbd90-e210-4319-ad04-20f28f9a98c5)
 
-
+nnn
 ***
 
 ## Link to the CSV file
