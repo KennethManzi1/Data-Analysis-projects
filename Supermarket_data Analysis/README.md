@@ -47,7 +47,7 @@ sup_dat.describe()
 ```
 ![Screen Shot 2023-09-14 at 2 22 51 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/32d8a1d2-dbd2-4b30-a674-adc3ef9721b6)
 
-
+##
 
 - We will check for any Null Values
 ```
@@ -57,7 +57,7 @@ sup_dat.isnull()
 
 Here we can see that there are no Null values within the data set
 
-#
+##
 - Counts of the sales based on the product line and City
 ```
 sup_dat['Product line'].value_counts()
