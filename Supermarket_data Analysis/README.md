@@ -38,6 +38,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 ```
   
+- Next we will get the Supermarket Sales Csv and looking at the information available
+```
+sup_dat = pd.read_csv('/Users/kennykaijage/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Datasets/Datasets_for_p
+sup_dat
+sup_dat.info()
+sup_dat.describe()
+```
+![Screen Shot 2023-09-14 at 2 22 51 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/32d8a1d2-dbd2-4b30-a674-adc3ef9721b6)
+
 
 
 
