@@ -55,6 +55,15 @@ sup_dat.isnull()
 ```
 ![Screen Shot 2023-09-14 at 2 24 59 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/13acbea5-2a9a-4e75-bc88-9860f6e3169d)
 
+Here we can see that there are no Null values within the data set
+
+#
+- Counts of the sales based on the product line and City
+```
+sup_dat['Product line'].value_counts()
+sup_dat['City'].value_counts()
+```
+![Screen Shot 2023-09-14 at 2 29 02 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/551fbd90-e210-4319-ad04-20f28f9a98c5)
 
 
 ***
