@@ -30,7 +30,7 @@
 
 - First we will begin to import the necessary libraries that we will need to conduct the analysis. These libraries are Pandas, Numpy, Matplotlib for the visualizations and also seaborn for the visualizations as well
 
-```python
+```Python
 #Importing the Libraries
 import seaborn as sns
 import numpy as np
@@ -39,7 +39,7 @@ import matplotlib.pyplot as plt
 ```
   
 - Next we will get the Supermarket Sales Csv and looking at the information available
-```
+```SQL
 sup_dat = pd.read_csv('/Users/kennykaijage/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Datasets/Datasets_for_p
 sup_dat
 sup_dat.info()
