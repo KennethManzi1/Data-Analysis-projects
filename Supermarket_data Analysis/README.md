@@ -23,6 +23,24 @@
 - My analysis and findings are found in my Python Jupyter notebook [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/Supermarket_data%20Analysis/Kaggle%20Super%20Market%20Analysis.ipynb)
 - My Original Python code created in Spyder can be found [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/Supermarket_data%20Analysis/Supermarketanalysis.py)
 
+
+***
+
+## Analysis 
+
+- First we will begin to import the necessary libraries that we will need to conduct the analysis. These libraries are Pandas, Numpy, Matplotlib for the visualizations and also seaborn for the visualizations as well
+
+```
+#Importing the Libraries
+import seaborn as sns
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+  
+
+
+
 ***
 
 ## Link to the CSV file
