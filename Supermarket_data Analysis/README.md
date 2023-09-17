@@ -15,7 +15,7 @@
 - Data Analysis on the super market sales CSV file acquired from the Kaggle website.
 - We will be using multiple libraries in this project which will help us in analysing and visualizing our dataset.
 - We will analyze many variables within this data set such as weekly sales across each city and Total sales per gender based on the product line
-- Visualizations such as bar graphs, scatterplots, and line graphs were used to generate insights to compare key areas such as weekly sales gross price vs income.
+- Visualizations such as bar graphs, scatterplots, and line graphs were used to generate insights to compare key areas such as weekly sales over time and gross price vs income.
 
 ***
 
