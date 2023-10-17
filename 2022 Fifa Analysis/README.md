@@ -1,6 +1,7 @@
 # FIFA 2022 Data Analysis
 
-<img src="https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/ed12d855-b1ac-40dc-840f-410349c48d91" alt="Image" width="500" height="520">
+<img src="https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/57199a3d-2d7f-44bb-92a2-4895ea28685b" 
+alt="Image" width="500" height="520">
 
 
 ## Table of Contents
