@@ -17,3 +17,4 @@ If you have any questions or areas of improvement for my projects and also want 
 - [First Portfolio](https://github.com/KennethManzi1/Portfolio)
 - [8 week SQL challenge](https://github.com/KennethManzi1/8-week-SQL-Challenge)
 - [Kaggle Super Market Analysis](https://github.com/KennethManzi1/Data-Analysis-projects/tree/main/Supermarket_data%20Analysis)
+- [FIFA 2022 Data Analysis](https://github.com/KennethManzi1/Data-Analysis-projects/tree/main/2022%20Fifa%20Analysis)
