@@ -14,6 +14,17 @@ alt="Image" width="700" height="520">
 
 ## Business Task
 
+This is an exploratory data analysis on the Fifa 2022 dataset acquired from the Kaggle website and we will be using multiple libraries in this project which will help us in analysing and visualizing our dataset.
+
+The FIFA22 dataset contains all key attributes, and features of male football players around the world. In this analysis, We will focus on key factors such as:
+- The relationship between Potential & wages based on the clubs that are paying the wages.
+- Potential & wages at the player level.
+- Which Nation is the most popular based on the number of players being represented.
+- Which player earns the most per age group and potential level.
+- Which Club has the highest average of wages paid to their players
+
+
+
 
 
 ***
