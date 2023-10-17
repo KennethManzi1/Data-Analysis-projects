@@ -32,7 +32,7 @@ The FIFA22 dataset contains all key attributes, and features of male football pl
 ## Solution and Code
 
 - My analysis and findings are found in my Python Jupyter notebook [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/2022%20Fifa%20Analysis/Fifa%202022%20analysis.ipynb)
-- My Original Python code created in Spyder can be found [here]
+- My Original Python code created in Spyder can be found [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/2022%20Fifa%20Analysis/Fifa2022Analysis.py)
 
 
 ***
