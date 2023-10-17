@@ -45,8 +45,8 @@ The FIFA22 dataset contains all key attributes, and features of male football pl
 ***
 
 ## Link to the CSV file
-- The link to the Kaggle CSV file can be found [here]
-- I have also included the CSV [here]
+- The link to the Kaggle CSV file can be found [here](https://www.kaggle.com/datasets/stefanoleone992/fifa-22-complete-player-dataset/code)
+- I have also included the CSV [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/2022%20Fifa%20Analysis/players22.csv)
 
 
 
