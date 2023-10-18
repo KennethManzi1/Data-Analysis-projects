@@ -91,6 +91,45 @@ new_fifadf
 
 - Here we will analyze the relationship between player potential and wages
 
+```Python
+plt.figure(figsize=(7, 5))
+sns.scatterplot(x = new_fifadf['potential'], y = new_fifadf['wage_eur'])
+plt.xlabel("Potential") 
+plt.ylabel("Wage EUR")
+plt.title("Potential & wage", fontsize = 18)
+plt.show()
+```
+
+From this scatterplot, we can see a positive correlation in the scatterplot between player potential and wages. In most cases, we can see that as the player's potential grows over time, so does their wages over time. We do see cases where the some of the player's wages remain the same while a couple others at mid 80s had a ridiculous high wage while a few 90s have a low wage.
+
+This may depend on the club that they play in as most clubs especially premier league clubs don't pay that many high wages while big teams like Manchester City, Barcelona, Real Madrid, and PSG pay higher wages to their best and high potential stars.
+
+#clubs 
+```Python
+new_fifadf['club_name']
+```
+```Python
+#new_fifadf['club_names'] = new_fifadf.loc[new_fifadf['club_name' == 'Barcelona']]
+
+#Filtering the dataset to analyze the player potential and wage for the top 8 teams.
+selected_clubs = ['Liverpool', 'Manchester United', 'Manchester City', 'Real Madrid CF', 'Paris Saint-Germain', 'FC Barcelona',
+                 'Chelsea', 'Juventus']
+
+# Filter the DataFrame to include only the selected clubs
+filtered_data = new_fifadf[new_fifadf['club_name'].isin(selected_clubs)]
+
+plt.figure(figsize=(7, 5))
+sns.scatterplot(x=filtered_data['potential'], y=filtered_data['wage_eur'], hue=filtered_data['club_name'])
+plt.xlabel("Potential") 
+plt.ylabel("Wage EUR")
+plt.title("Potential & Wage for Selected Clubs", fontsize=18)
+plt.show()
+
+```
+
+![Screen Shot 2023-10-18 at 4 41 47 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/7c9cf80b-56bc-4736-8c19-1db8a9b393b7)
+
+
 
 ***
 
