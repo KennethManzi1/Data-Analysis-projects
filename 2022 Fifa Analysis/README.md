@@ -63,6 +63,7 @@ fifadat2020.describe()
 ##
 
 - We will check for any Null Values
+  
 ```Python
 fifadat2020.isnull()
 ```
@@ -73,6 +74,7 @@ Here we can see that there are no Null values within the data set
 ##
 
 - Dropping columns that we don't need
+  
 ```Python
 drop_columns = ['sofifa_id', 'player_url', 'long_name', 'dob', 'club_loaned_from',
                    'nation_position', 'nation_jersey_number', 'body_type', 'real_face',
@@ -104,10 +106,12 @@ From this scatterplot, we can see a positive correlation in the scatterplot betw
 
 This may depend on the club that they play in as most clubs especially premier league clubs don't pay that many high wages while big teams like Manchester City, Barcelona, Real Madrid, and PSG pay higher wages to their best and high potential stars.
 
-#clubs 
+
 ```Python
+#clubs 
 new_fifadf['club_name']
 ```
+
 ```Python
 #new_fifadf['club_names'] = new_fifadf.loc[new_fifadf['club_name' == 'Barcelona']]
 
@@ -128,6 +132,94 @@ plt.show()
 ```
 
 ![Screen Shot 2023-10-18 at 4 41 47 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/7c9cf80b-56bc-4736-8c19-1db8a9b393b7)
+
+From the scatterplot, we can see that Real Madrid, Manchester City, and PSG do pay high wages on the 350k mark for some of their high potential super stars. We can analyze further to compare the players and their wages.
+
+##
+
+**Next we will select the top 21 players and analyzing their statistics**
+
+
+```Python
+top_21 = new_fifadf.nlargest(21, 'overall')
+top_21
+
+#Comparing the 21 players and their wages
+
+fig, ax = plt.subplots(figsize=(10,8))
+
+plt.scatter(top_21['potential'], top_21['wage_eur'] )
+plt.text(top_21.iloc[0]['potential'], top_21.iloc[0]['wage_eur'], top_21.iloc[0]['short_name'])
+plt.text(top_21.iloc[1]['potential'], top_21.iloc[1]['wage_eur'], top_21.iloc[1]['short_name'])
+#plt.text(top_21.iloc[2]['potential'], top_21.iloc[2]['wage_eur'], top_21.iloc[2]['short_name'])
+plt.text(top_21.iloc[3]['potential'], top_21.iloc[3]['wage_eur'], top_21.iloc[3]['short_name'])
+plt.text(top_21.iloc[4]['potential'], top_21.iloc[4]['wage_eur'], top_21.iloc[4]['short_name'])
+plt.text(top_21.iloc[5]['potential'], top_21.iloc[5]['wage_eur'], top_21.iloc[5]['short_name'])
+plt.text(top_21.iloc[6]['potential'], top_21.iloc[6]['wage_eur'], top_21.iloc[6]['short_name'])
+plt.text(top_21.iloc[7]['potential'], top_21.iloc[7]['wage_eur'], top_21.iloc[7]['short_name'])
+plt.text(top_21.iloc[8]['potential'], top_21.iloc[8]['wage_eur'], top_21.iloc[8]['short_name'])
+plt.text(top_21.iloc[9]['potential'], top_21.iloc[9]['wage_eur'], top_21.iloc[9]['short_name'])
+plt.text(top_21.iloc[10]['potential'], top_21.iloc[10]['wage_eur'], top_21.iloc[10]['short_name'])
+plt.text(top_21.iloc[11]['potential'], top_21.iloc[11]['wage_eur'], top_21.iloc[11]['short_name'])
+plt.text(top_21.iloc[12]['potential'], top_21.iloc[12]['wage_eur'], top_21.iloc[12]['short_name'])
+plt.text(top_21.iloc[13]['potential'], top_21.iloc[13]['wage_eur'], top_21.iloc[13]['short_name'])
+plt.text(top_21.iloc[14]['potential'], top_21.iloc[14]['wage_eur'], top_21.iloc[14]['short_name'])
+plt.text(top_21.iloc[15]['potential'], top_21.iloc[15]['wage_eur'], top_21.iloc[15]['short_name'])
+plt.text(top_21.iloc[16]['potential'], top_21.iloc[16]['wage_eur'], top_21.iloc[16]['short_name'])
+#plt.text(top_21.iloc[17]['potential'], top_21.iloc[17]['wage_eur'], top_21.iloc[17]['short_name'])
+plt.text(top_21.iloc[18]['potential'], top_21.iloc[18]['wage_eur'], top_21.iloc[18]['short_name'])
+plt.text(top_21.iloc[19]['potential'], top_21.iloc[19]['wage_eur'], top_21.iloc[19]['short_name'])
+plt.text(top_21.iloc[20]['potential'], top_21.iloc[20]['wage_eur'], top_21.iloc[20]['short_name'])
+
+ax.set_title("Overall Rating vs Wages")
+ax.set_ylabel('Wages')
+ax.set_xlabel('Rating')
+
+plt.show()
+```
+
+![Screen Shot 2023-10-18 at 4 48 29 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/2654d2ae-fd6b-45a5-9e28-310e17708f61)
+
+In Fifa 2022, we can see that there is no relationship between wages and rating and the reason for this is that we can see that Mbappe has a 95 rating but is only making less than 250k while Benzema has an 89 rating and is making close to 350k a week
+
+##
+
+**Next we will analyze and research which Nationality is more popular than the others**
+
+```Python
+national_counts = new_fifadf['nationality_name'].value_counts()
+national_counts
+```
+
+![Screen Shot 2023-10-18 at 4 50 03 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/2248c3fe-1407-41c3-8d4e-69522c141575)
+
+```Python
+#Creating a dictionary of the nationalities
+
+from collections import Counter
+bar_plot = dict(Counter(new_fifadf['nationality_name'].values).most_common(5))
+bar_plot
+
+```
+![Screen Shot 2023-10-18 at 4 56 33 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/4fbfaef8-341e-4372-bee5-79241e59d80c)
+
+
+
+```Python
+fig, ax = plt.subplots(figsize = (8,5))
+plt.bar(*zip(*bar_plot.items()))
+ax.set_title('Most Popular Nations')
+plt.show()
+
+```
+
+![Screen Shot 2023-10-18 at 4 57 11 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/62e43c07-e787-46ef-ac47-cb7752ecfdb2)
+
+
+
+
+
+
 
 
 
