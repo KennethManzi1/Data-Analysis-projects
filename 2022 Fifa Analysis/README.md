@@ -48,7 +48,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 ```
-Next we will get the Fifa 2022 Csv and looking at the information available
+- Next we will get the Fifa 2022 Csv and looking at the information available
 
 ```Python
 fifadat2020 = pd.read_csv('/Users/kennykaijage/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Datasets/Datasets_for_projects/players22.csv', encoding_errors= 'replace')
@@ -62,7 +62,7 @@ fifadat2020.describe()
 
 ##
 
-We will check for any Null Values
+- We will check for any Null Values
 ```Python
 fifadat2020.isnull()
 ```
@@ -72,7 +72,7 @@ Here we can see that there are no Null values within the data set
 
 ##
 
-Dropping columns that we don't need
+- Dropping columns that we don't need
 ```Python
 drop_columns = ['sofifa_id', 'player_url', 'long_name', 'dob', 'club_loaned_from',
                    'nation_position', 'nation_jersey_number', 'body_type', 'real_face',
@@ -89,7 +89,7 @@ new_fifadf
 
 **Relationship between player potential and wages**
 
-Here we will analyze the relationship between player potential and wages
+- Here we will analyze the relationship between player potential and wages
 
 
 ***
