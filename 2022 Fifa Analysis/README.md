@@ -216,12 +216,157 @@ plt.show()
 ![Screen Shot 2023-10-18 at 4 57 11 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/62e43c07-e787-46ef-ac47-cb7752ecfdb2)
 
 
+##
+**Average Player Potential Rating per Nationality**
+
+```Python
+avg_pot = new_fifadf.groupby('nationality_name')['potential'].mean().reset_index() 
+avg_pot = avg_pot.sort_values(by='potential', ascending=False)
+print(avg_pot)
+```
+
+![Screen Shot 2023-10-18 at 5 03 48 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/29a3c126-37de-48ed-86ab-4a8454eaaa16)
 
 
 
+```Python
+#Plotting the averages
+plt.figure(figsize=(20, 10))
+avg_pot['nationality_name'] = avg_pot['nationality_name'].head(30)
+sns.barplot(x= avg_pot['nationality_name'], y= avg_pot['potential'], palette='muted')
+plt.title('Average Player Potential per Nationality')
+plt.xlabel('nationality_name')
+plt.ylabel('Average potential')
+plt.xticks(rotation=45)
+plt.show()
+```
+
+![Screen Shot 2023-10-18 at 5 03 59 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/a4afdc45-755a-4b16-9a1a-21e319c9f9e9)
+
+
+##
+**Average Wages Per Team**
+
+```Python
+#Average Wages per Club
+
+avg_wages = new_fifadf.groupby('club_name')['wage_eur'].mean().reset_index() 
+avg_wages = avg_wages.sort_values(by='wage_eur', ascending=False)
+print(avg_wages)
+```
+
+![Screen Shot 2023-10-18 at 5 05 26 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/b99c3daf-d156-413a-8b83-7f3a6caa1d7b)
+
+
+```Python
+#Plotting the averages
+plt.figure(figsize=(20, 10))
+avg_wages['club_name'] = avg_wages['club_name'].head(30)
+sns.barplot(x= avg_wages['club_name'], y= avg_wages['wage_eur'], palette='muted')
+plt.title('Average Wages per team')
+plt.xlabel('Club')
+plt.ylabel('Average Wages')
+plt.xticks(rotation=45)
+plt.show()
+```
+![Screen Shot 2023-10-18 at 5 05 33 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/2fdfec94-1806-4aac-b97b-0d060d95b40a)
+
+
+##
+**Top 12 Players and their wages by potential and by their age**
+
+```Python
+players = new_fifadf[['short_name', 'wage_eur',
+                  'overall','age',
+                  'potential']].nlargest(12,['wage_eur']).set_index('short_name').sort_values(by = ['age'], ascending = False)
+
+players
+```
+![Screen Shot 2023-10-18 at 5 07 36 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/4bf65cd9-dcf2-4934-8879-9627d169b981)
+
+
+```Python
+# Top 12 players overall
+
+# We get the names and overals from the data
+Overall_Rank = new_fifadf["overall"]
+footballer = new_fifadf["short_name"]
+
+# Let's create dataframe for the overall rank and the footballer
+player_data = pd.DataFrame({'short_name': footballer,'overall':Overall_Rank})
+player_data.set_index('short_name')
+```
+
+![Screen Shot 2023-10-18 at 5 08 32 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/8e4ad3ab-8631-409c-8dd1-4ee35dac9cf6)
+
+```Python
+#plotting the data 
+
+x = new_fifadf['short_name'].head(12) 
+y = new_fifadf['overall'].head(12)
+
+# plot
+plt.figure(figsize=(7,10))
+
+
+ax= sns.barplot(x=y, y=x, palette = 'Purples_r')
+plt.xticks()
+plt.xlabel('Overall Ratings', size = 20) 
+plt.ylabel('Player Names', size = 20 ) 
+plt.title('FIFA22 Top 12 (Overall Rating)')
+
+plt.show()
+```
+
+![Screen Shot 2023-10-18 at 5 09 30 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/762ce79a-e126-4228-912a-4de8ab162f38)
+
+
+##
+**We will now create histograms to analyze distributions within the age of the players and also another histogram to analyze frequencies within the overall status of players**
+
+```Python
+# Distribution of players Ages
+
+plt.hist(new_fifadf['age'], bins = 15)
+plt.xlabel('Age of Players')
+plt.ylabel('Number of Players')
+plt.title('Distribution of Players Ages')
+
+plt.tight_layout(pad=2)
+plt.show()
+```
+
+![Screen Shot 2023-10-18 at 5 11 41 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/5d9a1c4c-af32-4832-b9e7-b6d5a9596525)
 
 
 
+```Python
+# Distribution of players status
+
+plt.hist(new_fifadf['overall'], bins = 20)
+plt.xlabel('Overall status of player in the game')
+plt.ylabel('Number of Players')
+plt.title('Overall Status of Player')
+
+plt.tight_layout(pad=2)
+plt.show()
+```
+![Screen Shot 2023-10-18 at 5 12 32 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/18dcecd7-ef05-4a56-99a3-d554938110af)
+
+
+Conclusion: This is such a fun data to work with. I am a big European Football guy especially Liverpool Football club. I'll do an analysis on Liverpool football Club data specifically at some point soon
+
+**From this Analysis we can conclude that:**
+- Messi is the best player.
+- Manchester City, Real Madrid, and Paris Saint Germain pay their stars higher wages(250k+) to their high potential superstar players than most clubs.
+- Kevin De Bryune is currently the highest paid player overall making 350k a week
+- There's generally a positive relationship between players potential rating & wages.
+- Majority of the players in Fifa 20 are in the 20-25 age range.
+- Majority of the players overall status level is between 60-75.
+- However among the top 21 sample of players that we took, that was not the case as we can see on that sample of players there was no correlation between those players potential rating and & wages. You can see Benzema with an 89 rating and Casemiro who is a CDM making way more money than Mbappe with 95+ rating.
+- Real Madrid pays the highest wages on average to their players compared to other teams.
+- Estonia has the highest potential average in the game compared to other nationalities.
+- England have the most representation among countries in the data with Germany and Spain closely getting there but England still blows them out of the water.
 
 ***
 
