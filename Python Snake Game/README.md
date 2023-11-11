@@ -19,26 +19,25 @@ We created the code by creating two classes. One for the snake game board with t
 
 Below is the each of the classes and their purpose:
 
-#class SnakeGUI
-#==========================================
-# Purpose: This class helps to create a visualization of the snake object and the game for the snake.
+## class SnakeGUI
+==========================================
+- Purpose: This class helps to create a visualization of the snake object and the game for the snake.
 
-# Instance variables:
-#   No instance variables.
+- Instance variables:
+   - No instance variables.
 
-# Methods: (What methods does this class have, and what does each do?)
-#    __init__: A constructor that only takes in self and has no other arguments. This constructor takes in the canvas, board, object, enemy object, random x integer and y integer for the food pallet, directions for the object,
-#       Whether the game is not over, the restart method, and the gameloop call.
+- Methods: (What methods does this class have, and what does each do?)
+    - __init__: A constructor that only takes in self and has no other arguments. This constructor takes in the canvas, board, object, enemy object, random x integer and y integer for the food pallet, directions for the object,
+      - Whether the game is not over, the restart method, and the gameloop call.
 
-#   restart: A method that has the same variables as the constructor except self.win. If the game is over, then the game will restart. Takes the parameter event since it is allowing the game to restart. 
-
-#   gameloop: A method that will help to make the game running.Doesn't take any parameters but allows the player and the enemy to move to certain directions in order to reach and eat the food pallet.
-#           When the game is playing, a new food pallet is created when the player and the enemy consumes the food and they both have new body parts. Returns the boolean value True.
-#           If the x and y coordinates of the player snake's head are less than 30 and greater than 630 meaning if the snake goes out of bounds, then the game ends and everything disappears. Returns boolean value True.
-#           If the player snake's head makes contact with the player snake's body, then the game ends, everything is deleted. Returns True.
-#           If the player snake's head makes contact with the enemy snake's body, then the game ends. Returns True.
-#           If the enemy snake's head makes contact with the player snake's body, then the game ends. Returns True. 
-#==========================================
+   - restart: A method that has the same variables as the constructor except self.win. If the game is over, then the game will restart. Takes the parameter event since it is allowing the game to restart.
+   - gameloop: A method that will help to make the game running.Doesn't take any parameters but allows the player and the enemy to move to certain directions in order to reach and eat the food pallet.
+         -  When the game is playing, a new food pallet is created when the player and the enemy consumes the food and they both have new body parts. Returns the boolean value True.
+         - If the x and y coordinates of the player snake's head are less than 30 and greater than 630 meaning if the snake goes out of bounds, then the game ends and everything disappears. Returns boolean value True.
+         - If the player snake's head makes contact with the player snake's body, then the game ends, everything is deleted. Returns True.
+          - If the player snake's head makes contact with the enemy snake's body, then the game ends. Returns True.
+           - If the enemy snake's head makes contact with the player snake's body, then the game ends. Returns True. 
+==========================================
 
 ```Python
 class SnakeGUI:
