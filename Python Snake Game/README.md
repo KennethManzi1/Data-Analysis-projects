@@ -42,6 +42,14 @@
 
 ==========================================
 
+
+**Importing The Libraries**
+
+```Python
+import tkinter as tk
+import random
+```
+
 ```Python
 class SnakeGUI:
     def __init__(self):
