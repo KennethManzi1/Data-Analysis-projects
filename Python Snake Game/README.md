@@ -38,6 +38,7 @@ Below is the each of the classes and their purpose:
      - If the player snake's head makes contact with the player snake's body, then the game ends, everything is deleted. Returns True.
        - If the player snake's head makes contact with the enemy snake's body, then the game ends. Returns True.
        - If the enemy snake's head makes contact with the player snake's body, then the game ends. Returns True.
+
 ==========================================
 
 ```Python
@@ -155,6 +156,7 @@ class SnakeGUI:
    - **go_right**: This  method allows the snake to go right based on the snake's velocity of x at 30 and y at 0.
    - **enemymovement**: This method determines determines the enemy snake's movement of choice based on it's coordinates in comparison to the food pallet's coordinates.
      - For instance if the x coordinates of the snake is larger than the x coordinates of the food, then the enemy snake will go left. 
+
 ==========================================
 
 ```Python
