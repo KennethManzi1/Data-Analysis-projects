@@ -231,7 +231,7 @@ tk.mainloop()
 
 ### Link to the Code
 
-- The link to the code can be found [Here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/Python%20Snake%20Game/Python%20Snake%20Game.py)
+- The link to the code can be found [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/Python%20Snake%20Game/Python%20Snake%20Game.py)
 
 - Once you download and save the code, make sure that your Python code editor has the updated module to run the code and play the game.
         
