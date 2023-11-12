@@ -101,6 +101,8 @@ plt.ylabel("Wage EUR")
 plt.title("Potential & wage", fontsize = 18)
 plt.show()
 ```
+![Screen Shot 2023-11-11 at 6 52 15 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/d37dcb37-0843-4976-a1e9-ba36d39d85fe)
+
 
 From this scatterplot, we can see a positive correlation in the scatterplot between player potential and wages. In most cases, we can see that as the player's potential grows over time, so does their wages over time. We do see cases where the some of the player's wages remain the same while a couple others at mid 80s had a ridiculous high wage while a few 90s have a low wage.
 
