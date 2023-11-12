@@ -225,6 +225,10 @@ SnakeGUI()
 tk.mainloop()
 
 ```
+
+***
+
+### Link to the Code
         
 
 
