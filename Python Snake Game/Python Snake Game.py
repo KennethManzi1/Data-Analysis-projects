@@ -1,4 +1,4 @@
-#HW 13
+#Python Snake Game
 import tkinter as tk
 import random
 
