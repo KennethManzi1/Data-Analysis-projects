@@ -23,12 +23,12 @@
 
 ## Class SnakeGUI
 ==========================================
-- Purpose: This class helps to create a visualization of the snake object and the game for the snake.
+- **Purpose**: This class helps to create a visualization of the snake object and the game for the snake.
 
-- Instance variables:
+- **Instance variables**:
    - No instance variables.
 
-- Methods: (What methods does this class have, and what does each do?)
+- **Methods**: (What methods does this class have, and what does each do?)
     - **__init__**: A constructor that only takes in self and has no other arguments. This constructor takes in the canvas, board, object, enemy object, random x integer and y integer for the food pallet, directions for the object,
       - Whether the game is not over, the restart method, and the gameloop call.
 
@@ -135,9 +135,9 @@ class SnakeGUI:
 
 ### Class Snake
 ==========================================
-- Purpose: This class helps to create the attributes of the player and the enemy snake.
+- **Purpose**: This class helps to create the attributes of the player and the enemy snake.
 
-- Instance variables:
+- **Instance variables**:
    - **x**: represents the x integer of the snake.
    - **y**: represents the y integer of the snake.
    - **color**: String that represents the color of the snake.
@@ -147,7 +147,7 @@ class SnakeGUI:
    - **vy**: This integer represents the snake's velocity in the y direction.
 
 
-- Methods: (What methods does this class have, and what does each do?)
+- **Methods**: (What methods does this class have, and what does each do?)
    - **__init__**: A constructor that takes in four arguments(not counting self) that initializes the x integer, the y integer, the color, and canvas for the snake.
    - **move**: A method that takes in three arguments and returns true if the coordinates of the food equal the coordinates of the snake. Furthermore, this lets the snake consume the food.
          - returns False otherwise and deletes the snake attributes out of the segments list.
