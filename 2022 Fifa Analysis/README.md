@@ -12,7 +12,7 @@ alt="Image" width="700" height="520">
 
 ***
 
-## Business Task
+## Business Task 
 
 This is an exploratory data analysis on the Fifa 2022 dataset acquired from the Kaggle website and we will be using multiple Python libraries in this project such as Pandas and Seaborn that will help us in analysing and visualizing our dataset.
 
