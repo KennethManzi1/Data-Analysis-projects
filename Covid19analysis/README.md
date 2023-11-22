@@ -199,7 +199,11 @@ ggplot(confirmed_cases_top7_outside_china, aes(date, cum_cases, color = country)
 
 ![11ecc233-0d4b-49ca-afe2-3925d3d2aea0](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/026ab845-d6fc-4390-978c-a2ed0ba00a39)
 
-- From the line plot, we can see that Italy clearly had the highest confirmed cases over time as time passed from late February and March
+Conclusion:
+- From the line plot, we can see that Italy clearly had the highest confirmed cases over time as time passed from late February and March.
+- The pandemic definitely impacted many countries when it first arrived and caused many cases to rise which resulted in sickness and illnesses throughout the globe.
+- Outside of China and South Korea, Many countries in Europe such as Italy(most hit with cases), Spain(second most hit with cases), Germany and France were especially hit with Covid 19 cases.
+- Iran was also drastically affected by Covid as well with the total cases reaching to 16169.
 
 
 
