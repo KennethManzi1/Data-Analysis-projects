@@ -29,7 +29,7 @@ We will visualize COVID-19 data from the first several weeks of the outbreak to 
 
 ## Solution and Code
 
-- My Original R code created in R Studio can be found [here]
+- My Original R code created in R Studio can be found [here](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/Covid19analysis/Covid%2019%20March_2020.R)
 
 ***
 
