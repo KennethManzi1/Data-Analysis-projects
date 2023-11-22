@@ -209,5 +209,10 @@ Conclusion:
 - Outside of China and South Korea, Many countries in Europe such as Italy(most hit with cases), Spain(second most hit with cases), Germany and France were especially hit with Covid 19 cases.
 - Iran was also drastically affected by Covid as well with the total cases reaching to 16169.
 
+***
+
+## Link to the CSV file
+- The link to the CSV files can be found [here](https://github.com/RamiKrispin/coronavirus)
+- I have also included the CSV [here](https://github.com/KennethManzi1/Data-Analysis-projects/tree/main/Covid19analysis/Visualizing%20COVID-19/datasets)
 
 
