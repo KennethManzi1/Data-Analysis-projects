@@ -88,3 +88,48 @@ plt_cum_confirmed_cases_china_vs_world
 - There were a couple of other landmark events that happened during the outbreak. For example, the huge jump in the China line on February 13, 2020 wasn't just a bad day regarding the outbreak; China changed the way it reported figures on that day (CT scans were accepted as evidence for COVID-19, rather than only lab tests).
 - By annotating events like this, we can better interpret changes in the plot.
 
+- Next We will Add a Trendline for China
+```R
+who_events <- tribble(
+  ~ date, ~ event,
+  "2020-01-30", "Global  Health \nEmergency Declared",
+  "2020-03-11", "Pandemic\n Declared",
+  "2020-02-13", "China Reporting\n Change"
+) %>%
+  mutate(date = as.Date(date))
+
+# Using who_events, add vertical dashed lines with an xintercept at date
+# and text at date, labeled by event, and at 100000 on the y-axis
+plt_cum_confirmed_cases_china_vs_world +
+  geom_vline(aes(xintercept = date), data = who_events, linetype = "dashed") +
+  geom_text(aes(date, label = event), data = who_events, y = 1e5)
+```
+![Screen Shot 2023-11-22 at 4 22 41 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/96f9031b-965f-4254-b2a6-d5fc161bc541)
+
+![plot_zoom_png](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/37b39d26-f405-4af3-b0c1-5c39f6ec9fad)
+
+- From the plot above, the growth rate in China is slower than linear. That's great news because it indicates China has at least somewhat contained the virus in late February and early March.
+
+- Now we will see the rest of the world's linear growth
+```R
+# Filter confirmed_cases_china_vs_world for not China
+not_china <- confirmed_cases_china_vs_world %>%
+  filter(is_china != "China")
+
+# Using not_china, draw a line plot cum_cases vs. date
+# Add a smooth trend line using linear regression, no error bars
+plt_not_china_trend_lin <- ggplot(not_china, aes(date, cum_cases)) +
+  geom_line() +
+  geom_smooth(method = "lm", se = FALSE) +
+  ylab("Cumulative confirmed cases")
+
+
+# See the result
+plt_not_china_trend_lin
+```R
+
+
+
+
+
+
