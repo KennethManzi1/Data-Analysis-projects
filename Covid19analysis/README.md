@@ -79,4 +79,10 @@ plt_cum_confirmed_cases_china_vs_world <- ggplot(glimpse(confirmed_cases_china_v
 
 # See the plot
 plt_cum_confirmed_cases_china_vs_world
-```R
+```
+![Screen Shot 2023-11-22 at 3 43 44 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/836c8484-8efd-495a-8019-4ebf5234c399)
+
+![plot_zoom_png](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/88d07328-21f3-4f17-8b3c-a9e3fad2aa20)
+
+
+
