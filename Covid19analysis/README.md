@@ -60,4 +60,23 @@ confirmed_cases_worldwide
 
 ![plot_zoom_png](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/5325911d-dc6d-4692-a365-d1f63aa1526b)
 
+- From the line plot, we can see that the y-axis numbers are huge and terrifying, with the number of confirmed cases around the world during March 2020 getting close to 200,000. You can also see during February, the number of cases slightly dropped, then it drastically shoots upwards on March. We can dig deeper to further analyze that trend.
+- Early on in the outbreak, the COVID-19 cases were primarily centered in China. Let's plot confirmed COVID-19 cases in China and the rest of the world separately to see if it gives us any insight.
 
+```R
+#China compared to the rest of the world
+# Read in datasets/confirmed_cases_china_vs_world.csv
+confirmed_cases_china_vs_world <- read_csv('Visualizing COVID-19/datasets/confirmed_cases_china_vs_world.csv')
+
+# See the result
+confirmed_cases_china_vs_world
+
+# Draw a line plot of cumulative cases vs. date, colored by is_china
+# Define aesthetics within the line geom
+plt_cum_confirmed_cases_china_vs_world <- ggplot(glimpse(confirmed_cases_china_vs_world)) +
+  geom_line(aes(date, cum_cases, color = is_china)) +
+  ylab("Cumulative confirmed cases")
+
+# See the plot
+plt_cum_confirmed_cases_china_vs_world
+```R
