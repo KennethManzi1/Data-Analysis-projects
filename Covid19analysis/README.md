@@ -45,4 +45,11 @@ library(readr)
 library(ggplot2)
 library(dplyr)
 ```
+- Next we will load the dataset of the confirmed cases worldwide
+```R
+# Read datasets/confirmed_cases_worldwide.csv into confirmed_cases_worldwide
+confirmed_cases_worldwide <- read_csv('datasets/confirmed_cases_worldwide.csv')
 
+# See the result
+confirmed_cases_worldwide
+```
