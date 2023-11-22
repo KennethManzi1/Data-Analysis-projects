@@ -172,11 +172,15 @@ top_countries_by_total_cases <- confirmed_cases_by_country %>%
   summarize(total_cases = max(cum_cases)) %>%
   top_n(10, total_cases)
 
-# See the result
-top_countries_by_total_cases
+# See the result by descending order
+top_countries_by_total_cases_desc <- top_countries_by_total_cases[order(top_countries_by_total_cases$total_cases,
+                                                                        decreasing = TRUE),]
+top_countries_by_total_cases_desc
 ```
 
-![Screen Shot 2023-11-22 at 4 35 46 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/633d6705-77fd-445d-89d8-ca55eaeb4744)
+![Screen Shot 2023-11-22 at 4 58 23 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/9e712f4a-6f61-4b3f-97c7-a5e17881be31)
+
+
 
 - Even though the outbreak was first identified in China, we can see South Korea in the above table. Four of the listed countries (France, Germany, Italy, and Spain) are in Europe and share borders.
 - To get more context, we can plot these countries' confirmed cases over time.
