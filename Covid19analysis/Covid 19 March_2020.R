@@ -1,4 +1,4 @@
-#Covid 19 data analysis using March 2020 data
+#Covid 19 data analysis in R using March 2020 data
 
 #Loading the readr, ggplot2, and dplyr packages
 install.packages('readr')
@@ -108,4 +108,4 @@ ggplot(confirmed_cases_top7_outside_china, aes(date, cum_cases, color = country)
   geom_line() +
   ylab("Cumulative confirmed cases")
 
-#Distribution of 
+
