@@ -53,3 +53,5 @@ confirmed_cases_worldwide <- read_csv('datasets/confirmed_cases_worldwide.csv')
 # See the result
 confirmed_cases_worldwide
 ```
+![Screen Shot 2023-11-22 at 3 35 17 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/b2e4f31e-ec71-4295-be18-56d243dec8f4)
+
