@@ -199,7 +199,7 @@ ggplot(confirmed_cases_top7_outside_china, aes(date, cum_cases, color = country)
 
 ![11ecc233-0d4b-49ca-afe2-3925d3d2aea0](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/026ab845-d6fc-4390-978c-a2ed0ba00a39)
 
-
+- From the line plot, we can see that Italy cleared had the highest confirmed cases over time as time passed from late February and March
 
 
 
