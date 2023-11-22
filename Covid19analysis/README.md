@@ -84,5 +84,7 @@ plt_cum_confirmed_cases_china_vs_world
 
 ![plot_zoom_png](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/88d07328-21f3-4f17-8b3c-a9e3fad2aa20)
 
-
+- The two lines have very different shapes. In February, the majority of cases were in China. That changed in March when it really became a global outbreak: around March 14, the total number of cases outside China overtook the cases inside China. This was days after the WHO declared a pandemic.
+- There were a couple of other landmark events that happened during the outbreak. For example, the huge jump in the China line on February 13, 2020 wasn't just a bad day regarding the outbreak; China changed the way it reported figures on that day (CT scans were accepted as evidence for COVID-19, rather than only lab tests).
+- By annotating events like this, we can better interpret changes in the plot.
 
