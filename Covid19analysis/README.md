@@ -16,10 +16,33 @@ alt="Image" width="700" height="520">
 
 ## Business Task
 
-n December 2019, COVID-19 coronavirus was first identified in the Wuhan region of China. By March 11, 2020, the World Health Organization (WHO) categorized the COVID-19 outbreak as a pandemic. A lot has happened in the months in between with major outbreaks in Iran, South Korea, and Italy.
+In December 2019, COVID-19 coronavirus was first identified in the Wuhan region of China. By March 11, 2020, the World Health Organization (WHO) categorized the COVID-19 outbreak as a pandemic. A lot has happened in the months in between with major outbreaks in Iran, South Korea, and Italy.
 
 We know that COVID-19 spreads through respiratory droplets, such as through coughing, sneezing, or speaking. But, how quickly did the virus spread across the globe? And, can we see any effect from country-wide policies, like shutdowns and quarantines?
 
 Fortunately, organizations around the world have been collecting data so that governments can monitor and learn from this pandemic. Notably, the Johns Hopkins University Center for Systems Science and Engineering created a 
 publicly available [data repository](https://github.com/RamiKrispin/coronavirus) to consolidate this data from sources like the WHO, the Centers for Disease Control and Prevention (CDC), and the Ministry of Health from multiple countries.
+
+We will visualize COVID-19 data from the first several weeks of the outbreak to see at what point this virus became a global pandemic.
+
+***
+
+## Solution and Code
+
+- My Original R code created in R Studio can be found [here]
+
+***
+
+## Analysis 
+
+- First we will begin to install and import the necessary libraries that we will need to conduct the analysis. These libraries are readr, ggplot2, and dplyr.
+
+```R
+install.packages('readr')
+install.packages('ggplot2')
+install.packages('dplyr')
+library(readr)
+library(ggplot2)
+library(dplyr)
+```
 
