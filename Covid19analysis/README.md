@@ -87,8 +87,6 @@ plt_cum_confirmed_cases_china_vs_world
 - The two lines have very different shapes. In February, the majority of cases were in China. That changed in March when it really became a global outbreak: around March 14, the total number of cases outside China overtook the cases inside China. This was days after the WHO declared a pandemic.
 - There were a couple of other landmark events that happened during the outbreak. For example, the huge jump in the China line on February 13, 2020 wasn't just a bad day regarding the outbreak; China changed the way it reported figures on that day (CT scans were accepted as evidence for COVID-19, rather than only lab tests).
 - By annotating events like this, we can better interpret changes in the plot.
-
-- Next We will Add a Trendline for China
 ```R
 who_events <- tribble(
   ~ date, ~ event,
@@ -108,6 +106,26 @@ plt_cum_confirmed_cases_china_vs_world +
 
 ![plot_zoom_png](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/37b39d26-f405-4af3-b0c1-5c39f6ec9fad)
 
+- Next We will Add a Trendline for China
+```R
+#Adding a Trendline to China
+# Filter for China, from Feb 15
+china_after_feb15 <- confirmed_cases_china_vs_world %>%
+  filter(is_china == "China", date >= "2020-02-15")
+
+# Using china_after_feb15, draw a line plot cum_cases vs. date
+# Add a smooth trend line using linear regression, no error bars
+ggplot(china_after_feb15, aes(date, cum_cases)) +
+  geom_line() +
+  geom_smooth(method = "lm", se = FALSE) +
+  ylab("Cumulative confirmed cases")
+
+```
+![Screen Shot 2023-11-22 at 4 29 42 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/1e6f16f6-8930-4e2e-8535-69744f0fd4f4)
+
+![Screen Shot 2023-11-22 at 4 29 42 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/18c13a58-9942-4477-bb6d-7db40e503094)
+
+
 - From the plot above, the growth rate in China is slower than linear. That's great news because it indicates China has at least somewhat contained the virus in late February and early March.
 
 - Now we will see the rest of the world's linear growth
@@ -126,8 +144,60 @@ plt_not_china_trend_lin <- ggplot(not_china, aes(date, cum_cases)) +
 
 # See the result
 plt_not_china_trend_lin
-```R
+```
 
+![401fa44b-dd9c-4305-af70-9d6ab65b0e59](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/c4b9887d-dda9-41a3-ad01-3c4ed4fda766)
+
+- From the plot above, we can see a straight line does not fit well at all, and the rest of the world is growing much faster than linearly. What if we added a logarithmic scale to the y-axis?
+
+```R
+# Modify the plot to use a logarithmic scale on the y-axis
+plt_not_china_trend_lin + 
+  scale_y_log10()
+```
+![29e8f863-5f93-48fc-8ce0-d2aca4d8561d](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/c7e246aa-72a3-4354-835a-79fc6b49e063)
+
+- With the logarithmic scale, we get a much closer fit to the data. From a data science point of view, a good fit is great news.
+- Unfortunately, from a public health point of view, that means that cases of COVID-19 in the rest of the world are growing at an exponential rate, which is terrible news.
+- Not all countries are being affected by COVID-19 equally, and it would be helpful to know where in the world the problems are greatest.
+
+```R
+#Countries outside of China that have been hit hardest
+confirmed_cases_by_country <- read_csv("Visualizing COVID-19/datasets/confirmed_cases_by_country.csv")
+glimpse(confirmed_cases_by_country)
+
+# Group by country, summarize to calculate total cases, find the top 10
+top_countries_by_total_cases <- confirmed_cases_by_country %>%
+  group_by(country) %>%
+  summarize(total_cases = max(cum_cases)) %>%
+  top_n(10, total_cases)
+
+# See the result
+top_countries_by_total_cases
+```
+
+![Screen Shot 2023-11-22 at 4 35 46 PM](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/633d6705-77fd-445d-89d8-ca55eaeb4744)
+
+- Even though the outbreak was first identified in China, we can see South Korea in the above table. Four of the listed countries (France, Germany, Italy, and Spain) are in Europe and share borders.
+- To get more context, we can plot these countries' confirmed cases over time.
+
+```R
+#Plotting the hardest hit countries during March 2020
+# Read in the dataset from datasets/confirmed_cases_top7_outside_china.csv
+confirmed_cases_top7_outside_china <- read_csv("Visualizing COVID-19/datasets/confirmed_cases_top7_outside_china.csv")
+
+# Glimpse at the contents of confirmed_cases_top7_outside_china
+glimpse(confirmed_cases_top7_outside_china)
+
+# Using confirmed_cases_top7_outside_china, draw a line plot of
+# cum_cases vs. date, colored by country
+ggplot(confirmed_cases_top7_outside_china, aes(date, cum_cases, color = country)) +
+  geom_line() +
+  ylab("Cumulative confirmed cases")
+```
+
+
+![11ecc233-0d4b-49ca-afe2-3925d3d2aea0](https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/026ab845-d6fc-4390-978c-a2ed0ba00a39)
 
 
 
