@@ -20,3 +20,4 @@ If you have any questions or areas of improvement for my projects and also want 
 - [FIFA 2022 Data Analysis](https://github.com/KennethManzi1/Data-Analysis-projects/tree/main/2022%20Fifa%20Analysis)
 - [Python Snake Game](https://github.com/KennethManzi1/Data-Analysis-projects/tree/main/Python%20Snake%20Game)
 - [COVID 19 Analysis March 2020](https://github.com/KennethManzi1/Data-Analysis-projects/tree/main/Covid19analysis)
+- [Python ChatGPT Project](https://github.com/KennethManzi1/Data-Analysis-projects/tree/main/ChatGPT)
