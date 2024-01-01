@@ -1,6 +1,6 @@
 import pandas as pd
 from openai import OpenAI
-openaiAPI = 'YOUR API KEY HERE'
+openaiAPI = 'YOUR API KEY HERE' 
 openaiAPI
 #function to run chat GPT in Jupyter using the client.chat.completions.create script from 
 #https://github.com/openai/openai-python/discussions/742
