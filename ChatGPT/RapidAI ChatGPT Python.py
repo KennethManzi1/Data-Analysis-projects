@@ -3,7 +3,7 @@ url = "https://open-ai21.p.rapidapi.com/conversationgpt"
 headers = {
     "content-type": "application/json",
     "X-RapidAPI-Key": "YOUR API KEY HERE", 
-    "X-RapidAPI-Host": "open-ai21.p.rapidapi.com"
+    "X-RapidAPI-Host": "open-ai21.p.rapidapi.com" 
 }
 # While loop to continuously prompt for user input
 while True:
