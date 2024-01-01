@@ -2,7 +2,7 @@ import requests
 url = "https://open-ai21.p.rapidapi.com/conversationgpt"
 headers = {
     "content-type": "application/json",
-    "X-RapidAPI-Key": "8dcbe22431msh7b0dd55a8b9d96dp12f6cajsn3ff11564ed99", 
+    "X-RapidAPI-Key": "YOUR API KEY HERE", 
     "X-RapidAPI-Host": "open-ai21.p.rapidapi.com"
 }
 # While loop to continuously prompt for user input
