@@ -71,20 +71,20 @@ def chat_gpt(prompt):
 
 ```Python
 ##Enter Your Question as many times as you want until you say quit, exit, and bye in which the code stops
-if __name__ == "__main__":
-    while True:
-        user_input = input("Hello How can I assist You?: ")
-        if user_input.lower() in ["quit", "exit", "bye"]:
-            print("No Worries. Let me know Whether I can further assist you. Have a Nice Day!!!")
-            break
-        response = chat_gpt(user_input)
-        print(response)
+
+while True:
+    user_input = input("Hello How can I assist You?: ")
+    if user_input.lower() in ["quit", "exit", "bye"]:
+        print("No Worries. Let me know Whether I can further assist you. Have a Nice Day!!!")
+        break
+    response = chat_gpt(user_input)
+    print(response)
         
-            # Ask if the user wants to ask another question
-        continue_chat = input("\nWould you like to ask another question? (Type 'yes' or 'no'): ")
-        if continue_chat.lower() == 'no':
-            print("No Worries. Let me know Whether I can further assist you. Have a Nice Day!!!")
-            break
+        # Ask if the user wants to ask another question
+    continue_chat = input("\nWould you like to ask another question? (Type 'yes' or 'no'): ")
+    if continue_chat.lower() == 'no':
+        print("No Worries. Let me know Whether I can further assist you. Have a Nice Day!!!")
+        break
 ```
 
 - This code can be implemented in Jupyter notebook or Visual Studio Code. Here is a below example
