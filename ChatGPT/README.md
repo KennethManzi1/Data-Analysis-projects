@@ -4,7 +4,7 @@
 - [Problem](#Problem) 
 - [Solution 1](#Solution-1)
 - [Solution 2](#Solution-2) 
-- [Solution 3](Solution-3)
+- [Solution 3](#Solution-3)
 - [Links](#Links)
 
 ***
