@@ -216,7 +216,7 @@ https://github.com/KennethManzi1/Data-Analysis-projects/assets/120513764/0f93a50
 ***
 
 ## Links
-- [OpenAI ChatGPT Code](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/ChatGPT/OpenAI%20Chat%20GPT%20Python.py)
+- [OpenAI ChatGPT Code](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/ChatGPT/OpenAI%20ChatGPT%20Python.py)
 - [RapidAI ChatGPT Code](https://github.com/KennethManzi1/Data-Analysis-projects/blob/main/ChatGPT/RapidAI%20ChatGPT%20Python.py)
 - [Open AI Website](https://platform.openai.com/)
 - [Open AI Python Github resources](https://github.com/openai/openai-python/discussions/742)
